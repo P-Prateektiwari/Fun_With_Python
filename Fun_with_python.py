@@ -67,11 +67,13 @@ elif(choice==2):
 elif(choice==3):
     print("3.Ludo Dice")
     print("GAME START")
-    n=int(input("enter the number of time you want to play"))
     import random
-    for i in range(1,n+1):
+    while (1<2):
         c=random.randrange(1,7)
-        print(i,"turn",c)
+        print("\nDice Display",c)
+        e=int(input("\n1.Continue\n2.Break"))
+        if (e==2):
+            break
 elif(choice==4):
     print("4.Toss A Coin")
     print("GAME START")
