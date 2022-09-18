@@ -72,25 +72,27 @@ elif(choice==3):
         c=random.randrange(1,7)
         print("\nDice Display",c)
         e=int(input("\n1.Continue\n2.Break"))
-        if (e==2):
+        if (e!=1):
             break
 elif(choice==4):
     print("4.Toss A Coin")
     print("GAME START")
-    n=int(input("enter the number of time you want to play"))
     head=0
     tail=0
     import random
-    for i in range(n):
+    while(1<2):
         c=random.randrange(0,2)
         if(c==0):
-            print(i,"head")
+            print("\nHead")
             head=head+1
         else:
-            print(i,"Tail")
-            tail=tail+1            
-   
-else:
-    print("Invalid Choice")
+            print("\nTail")
+            tail=tail+1
+        e=int(input("\n1.Continue\n2.Break"))
+        if (e!=1):
+            print("Number of times\n1.Head= ",head,"\n2.Tail= ",tail)
+            break
+    else:
+        print("Invalid Choice")
 
     
