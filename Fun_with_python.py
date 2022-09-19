@@ -48,6 +48,8 @@ if(choice==1):
             print("enter valid choice (number)")
     print(Z,"HAS SCORED :- \n",count,"out of",n)
 elif(choice==2):
+    import matplotlib.pyplot as plt 
+    con=[]
     print("2.Try Your Luck")
     print("GAME START")
     n=int(input("enter the number of time you want to play"))
@@ -64,6 +66,13 @@ elif(choice==2):
             print("dice fall on",c)
             print("Better Luck Next Time")
     print("you have give correct prediction",count,"times")
+    q=n-count
+    con.append(count)
+    con.append(q)
+    Zones=["Correct","Wrong"]
+    plt.axis("equal")
+    plt.pie(con,labels=Zones,autopct="%1.2f%%")
+    plt.show()           #Result_will_display_using_piechart
 elif(choice==3):
     print("3.Ludo Dice")
     print("GAME START")
