@@ -5,6 +5,8 @@ print("3.Ludo Dice")
 print("4.Toss A Coin")
 choice=int(input("Select the game you want to play \n"))
 if(choice==1):
+    import matplotlib.pyplot as plt 
+    con=[]    
     print("1.Stone, Paper, Scissor")
     print("GAME START")
     Z=input("Enter Player name \n")
@@ -47,6 +49,13 @@ if(choice==1):
         else:
             print("enter valid choice (number)")
     print(Z,"HAS SCORED :- \n",count,"out of",n)
+    q=n-count
+    con.append(count)
+    con.append(q)
+    Zones=["Correct","Wrong"]
+    plt.axis("equal")
+    plt.pie(con,labels=Zones,autopct="%1.2f%%")
+    plt.show()
 elif(choice==2):
     import matplotlib.pyplot as plt 
     con=[]
