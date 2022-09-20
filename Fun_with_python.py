@@ -55,7 +55,7 @@ if(choice==1):
     Zones=["Correct","Wrong"]
     plt.axis("equal")
     plt.pie(con,labels=Zones,autopct="%1.2f%%")
-    plt.show()
+    plt.show()                    #Result_will_display_using_piechart
 elif(choice==2):
     import matplotlib.pyplot as plt 
     con=[]
