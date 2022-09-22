@@ -452,6 +452,8 @@ elif(choice==4):
     head=0
     tail=0
     import random
+    import matplotlib.pyplot as plt 
+    con=[]
     while(1<2):
         c=random.randrange(0,2)
         if(c==0):
@@ -464,7 +466,14 @@ elif(choice==4):
         if (e!=1):
             print("Number of times\n1.Head= ",head,"\n2.Tail= ",tail)
             break
-    else:
-        print("Invalid Choice")
+    
+    con.append(head)
+    con.append(tail)
+    Zones=["Head","Tail"]
+    plt.axis("equal")
+    plt.pie(con,labels=Zones,autopct="%1.2f%%")
+    plt.show()
+else:
+    print("Invalid Choice")
 
     
